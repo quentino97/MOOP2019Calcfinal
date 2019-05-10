@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.quentino.calculatormoop.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llAngka1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Angka pertama : "
+            android:layout_weight="1"/>
+        <EditText
+            android:hint="Masukan Angka Pertama"
+            android:id="@+id/etAngka1"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAngka12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_below="@id/llAngka1">
+
+        <TextView
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Angka Kedua : "
+            android:layout_weight="1"/>
+        <EditText
+            android:hint="Masukan Angka Kedua"
+            android:id="@+id/etAngka2"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:text="Hasil Perhitungan"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_below="@id/llAngka12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/llCalc"
+        android:layout_below="@id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4">
+        <Button
+            android:id="@+id/btnAdd"
+            android:text="Addition"
+            android:onClick="Add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnSubtract"
+            android:text="Subtract"
+            android:onClick="Subtract"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnMultiple"
+            android:text="Multiply"
+            android:onClick="Multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnDiv"
+            android:text="Divide"
+            android:onClick="Divide"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
